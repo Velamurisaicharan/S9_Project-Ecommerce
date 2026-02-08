@@ -1,0 +1,195 @@
+/* ===============================
+   CART PAGE – MODERN UI
+================================ */
+
+
+.cart-page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #f8f9fb, #eef1f6);
+  padding: 40px 60px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------- HEADING ---------- */
+
+.cart-page h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* ---------- CART LIST ---------- */
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---------- CART ITEM ---------- */
+
+.cart-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- PRODUCT IMAGE ---------- */
+
+.cart-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+/* ---------- PRODUCT INFO ---------- */
+
+.cart-info {
+  flex: 1;
+}
+
+.cart-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.cart-info p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0a7cff;
+}
+
+/* ---------- REMOVE BUTTON ---------- */
+
+.delete-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #b11226;
+  transform: scale(1.05);
+}
+
+/* ---------- CART SUMMARY ---------- */
+
+.cart-summary {
+  margin-top: 35px;
+  background: #ffffff;
+  padding: 22px 30px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  bottom: 20px;
+}
+
+.cart-summary h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* ---------- BUY BUTTON ---------- */
+
+.buy-btn {
+  background: linear-gradient(135deg, #000000, #333333);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 14px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- EMPTY CART ---------- */
+
+.empty-cart {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 20px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cart-summary {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+/* ---------- BACK BUTTON ---------- */
+
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #0a7cff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  color: #084c9e;
+  transform: translateX(-4px);
+}
+

@@ -1,0 +1,115 @@
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/bg1.png"); /* FIRST IMAGE */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Card positioned near the LEFT side of the hand */
+.promo-card {
+  position: absolute;
+  top: 50%;
+  left: 12%;        /* adjust this to align with hand */
+  transform: translateY(-50%);
+  
+  width: 420px;
+  padding: 40px;
+  background-color:lightblue;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.promo-card h1 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.promo-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+.auth-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.auth-btn {
+  flex: 1;
+  padding: 14px 0;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* LOGIN */
+.auth-btn.login {
+  background: #000;
+  color: #fff;
+}
+
+/* SIGNUP */
+.auth-btn.signup {
+  background: #000;
+  color: #fff;
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+
+
+.delivery {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}.progress-container {
+  position: relative;
+  margin-top: 30px;
+  height: 36px;
+  width: 100%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+
+/* BLACK PATH */
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #000;
+  transition: width 0.03s linear;
+}
+
+/* TRUCK */
+.truck {
+  position: absolute;
+  top: 4px;
+  font-size: 22px;
+  z-index: 2;
+  transition: left 0.03s linear;
+}
+
+/* PERCENT TEXT */
+.percent {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 14px;
+  color: #fff;
+  z-index: 3;
+}

@@ -1,0 +1,122 @@
+
+body{
+    background-image: url(../assets/bg.png);
+    background-size: cover;
+}
+.orders-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 80px;
+  background: #f5f7fb;
+  font-family: "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+.orders-page h1 {
+  margin-bottom: 30px;
+}
+
+/* ORDER CARD FULL WIDTH */
+.order-card {
+  width: 100%;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADER */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* ITEMS */
+.order-items {
+  width: 100%;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.order-item {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.order-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* FOOTER */
+.order-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+/* STATUS */
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.paid {
+  background: #e0f7ea;
+  color: #0b8f4e;
+}
+
+.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* EMPTY */
+.empty-orders {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 26px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .orders-page {
+    padding: 20px;
+  }
+
+  .order-footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #0a7cff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.back-btn:hover {
+  color: #084c9e;
+}
+

@@ -1,0 +1,214 @@
+/* =========================
+   COMMON WRAPPER
+========================= */
+/* =========================
+   CENTER TEXT + ARROW
+========================= */
+
+/* =========================
+   CENTER IMAGE INSIDE ELLIPSE
+========================= */
+
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-image img {
+  width: 240px;          /* 🔥 increased size */
+  height: auto;
+  opacity: 0.95;
+  
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+
+.ellipse-wrapper.orbit:hover .center-image img {
+  transform: scale(1.1) rotate(-35deg);
+}
+
+
+/* ARROW ANIMATION */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  
+  
+}
+.ellipse-wrapper {
+  width: 100vw;
+  transition: all 0.9s ease;
+}
+
+/* =========================
+   ORBIT MODE
+========================= */
+.ellipse-wrapper.orbit {
+  position: relative;
+  height: 70vh;
+  transform: rotate(35deg);
+  
+}
+
+.ellipse-path {
+  position: absolute;
+  width: 90vw;
+  height: 36vh;
+  border: 2px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* =========================
+   PRODUCT (ORBIT)
+========================= */
+.product-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70px;
+  height: 70px;
+  transition: transform 0.9s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+/* =========================
+   GRID MODE (E-COMMERCE)
+========================= */
+.ellipse-wrapper.grid {
+  transform: rotate(0deg);
+  padding: 80px 6vw;
+  
+
+  display: grid;
+  grid-template-columns: repeat(4, 330px); /* ✅ 4 cards per row */
+  row-gap:30px;
+  column-gap: 50px;
+
+  
+   /* matches screenshot background */
+}
+
+/* =========================
+   PRODUCT CARD (GRID)
+========================= */
+.ellipse-wrapper.grid .product-card {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  background-color: rgba(231, 195, 168, 1);
+  border-radius: 20px;
+  padding: 20px;
+
+  text-align: center;
+ 
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.ellipse-wrapper.grid .product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* IMAGE */
+.ellipse-wrapper.grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+/* =========================
+   CARD INFO
+========================= */
+.card-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card-info p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn{
+  display:grid ;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+}
+.card-info button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: yellow;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  
+}
+
+.card-info button:hover {
+  background: #ffeb00;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .ellipse-wrapper.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ellipse-wrapper.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .ellipse-wrapper.grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
